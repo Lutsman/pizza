@@ -22,13 +22,14 @@
     <!--For improved cross-browser rendering-->
     <link rel="stylesheet" href="css/normalize.css">
     <!--<link rel="stylesheet" href="plugins/stepper/jquery.fs.stepper.css">-->
+    <link rel="stylesheet" href="plugins/mmenu/jquery.mmenu.all.css">
 
     <!-- Custom styles CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="page-wrap">
-        <header>
+        <header class="header Fixed">
             <div class="container">
                 <div class="header__top-line">
                     <div class="header__slogan">Доставка вкусной еды в Бресте!</div>
@@ -60,7 +61,22 @@
                 </nav>
 
             </div>
-
+            <nav id="m-menu-btn-wrapper">
+                <div id="hamburger" class="menu-button hamburger hamburger--collapse js-hamburger">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </div>
+            </nav>
+            <nav id="m-menu"> <!-- mobile menu -->
+                <ul>
+                    <li><a href="#home" data-translation="0">Главная</a></li>
+                    <li><a href="#portfolio">Наши работы</a></li>
+                    <li><a href="#skills">Навыки</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav><!-- mobile menu -->
         </header>
 
         <div class="center-block">
@@ -179,6 +195,7 @@
 
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="plugins/stepper/jquery.fs.stepper.js"></script>
+    <script src="plugins/mmenu/jquery.mmenu.all.min.js"></script>
     <script src="js/app.js"></script>
 
 
