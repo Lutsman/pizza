@@ -23,7 +23,7 @@
     background-size: contain;
   }
   .content__goods-box {
-    padding-right: 0;
+    padding: 0 15px;
   }
   .goods-box__image-box {
     width: 150px;
@@ -82,6 +82,12 @@
 
 /* Small devices */
 @media (max-width: 991px) {
+  header .container, .center-block {
+    padding-right: 0;
+  }
+  .goods-menu {
+    display: none;
+  }
 }
 
 /* Extra small devices */
