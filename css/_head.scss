@@ -168,6 +168,7 @@ header {
         position: relative;
         z-index: 2;
         width: 24%;
+        min-width: 380px;
         min-height: 61px;
         padding-left: 80px;
         font: 18px $robotoSlab;
@@ -231,7 +232,7 @@ header {
     font-size: 40px;
 }
 .header__logo {
-    width: 24%;
+    width: 298px;
 
     a {
         display: block;

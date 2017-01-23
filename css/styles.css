@@ -214,6 +214,7 @@ header {
     position: relative;
     z-index: 2;
     width: 24%;
+    min-width: 380px;
     min-height: 61px;
     padding-left: 80px;
     font: 18px "Roboto Slab", serif;
@@ -259,7 +260,7 @@ header {
   font-size: 40px; }
 
 .header__logo {
-  width: 24%; }
+  width: 298px; }
   .header__logo a {
     display: block; }
 
@@ -495,16 +496,7 @@ header {
  Colors Backgrounds
  ---------------------------------------------- */
 /* Medium devices */
-@media (max-width: 1199px) {
-  .container {
-    width: 970px; } }
 /* Small devices */
-@media (max-width: 991px) {
-  .container {
-    width: 750px; } }
 /* Extra small devices */
-@media (max-width: 767px) {
-  .container {
-    width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */
