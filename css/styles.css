@@ -421,7 +421,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
 .goods-menu {
   position: absolute;
   z-index: 1100;
-  top: 0;
+  top: 30px;
   right: 20px;
   width: 250px;
   font-size: 24px;
