@@ -5,26 +5,15 @@
     max-height: 0;
     padding: 0; }
   to {
-    max-height: 300px;
+    max-height: 100%;
     padding: 19px 0; } }
 @keyframes search-advance-hide {
   from {
-    max-height: 300px;
+    max-height: 100%;
     padding: 19px 0; }
   to {
     max-height: 0;
     padding: 0; } }
-/*fade*/
-@keyframes fade-in {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@keyframes fade-out {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0; } }
 /*Import fonts from Google fonts */
 @font-face {
   font-family: 'Acrom';
@@ -104,15 +93,9 @@ header::after, footer::after, div::after, nav::after, ul::after, form::after {
   z-index: 2;
   padding-right: 300px; }
 
-/*section, .container {
-    position: relative;
-    z-index: 2;
-}
+.hidden {
+  display: none; }
 
-.container {
-    width: 1220px;
-    margin: 0 auto;
-}*/
 /* ----------------------------------------------
  Fonts Paragrahps
  ---------------------------------------------- */
@@ -377,7 +360,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
 .goods-menu {
   position: absolute;
   z-index: 1100;
-  top: 26px;
+  top: 0;
   right: 20px;
   width: 250px;
   font-size: 24px;
@@ -385,7 +368,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   font-variant: small-caps;
   text-align: left; }
   .goods-menu ul {
-    padding: 100px 0;
+    padding: 60px 0 40px;
     margin-right: 40px;
     border-right: 4px solid rgba(0, 0, 0, 0.2); }
   .goods-menu li {
@@ -579,18 +562,6 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   .btn-scroll-down::after {
     top: 17px; }
 
-.hidden {
-  display: none; }
-
-/* ----------------------------------------------
- Footer
- ---------------------------------------------- */
-/* ----------------------------------------------
- Sections
- ---------------------------------------------- */
-/* ----------------------------------------------
- Colors Backgrounds
- ---------------------------------------------- */
 /* Large devices */
 @media (max-width: 1529px) {
   h2 {
@@ -671,5 +642,70 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   .goods-menu {
     display: none; } }
 /* Extra small devices */
+@media (max-width: 767px) {
+  .page-wrap {
+    padding-top: 430px; }
+
+  header {
+    padding: 10px 20px 0; }
+
+  .header__slogan {
+    width: 100%;
+    margin-bottom: 20px; }
+
+  .header__logo {
+    float: left;
+    width: 35%; }
+
+  .header__contacts {
+    float: left;
+    width: 65%;
+    padding-right: 0; }
+
+  .header__bottom-line {
+    padding-top: 30px; }
+    .header__bottom-line > div {
+      width: 450px;
+      padding-top: 15px;
+      padding-right: 0;
+      margin-bottom: 5px; }
+
+  .shadow-line {
+    top: 28px; } }
+@media (max-width: 575px) {
+  .page-wrap {
+    padding-top: 480px; }
+
+  .header__slogan {
+    margin-bottom: 10px;
+    font-size: 20px; }
+
+  .header__contacts {
+    float: none;
+    width: 100%;
+    padding: 0;
+    font-size: 16px;
+    text-align: center; }
+
+  .header__logo {
+    float: none;
+    width: 200px;
+    margin-bottom: 10px; }
+
+  .header__bottom-line {
+    padding-top: 10px;
+    padding-left: 20px; }
+    .header__bottom-line > div {
+      width: 260px;
+      padding-top: 10px;
+      font-size: 12px; }
+
+  .shadow-line {
+    top: 14px;
+    height: 16px; }
+
+  .content__goods-box {
+    float: none;
+    width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -44,15 +44,9 @@ header, footer, div, nav, ul, form {
     padding-right: 300px;
 }
 
-/*section, .container {
-    position: relative;
-    z-index: 2;
+.hidden {
+    display: none;
 }
-
-.container {
-    width: 1220px;
-    margin: 0 auto;
-}*/
 
 /* ----------------------------------------------
  Fonts Paragrahps
@@ -334,7 +328,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
 .goods-menu {
     position: absolute;
     z-index: 1100;
-    top: 26px;
+    top: 0;
     right: 20px;
     width: 250px;
     font-size: 24px;
@@ -343,7 +337,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     text-align: left;
 
     ul {
-        padding: 100px 0;
+        padding: 60px 0 40px;
         margin-right: 40px;
         border-right: 4px solid rgba(0, 0, 0, 0.2);
     }
