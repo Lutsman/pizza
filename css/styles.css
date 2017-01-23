@@ -161,7 +161,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 30px 0 0;
+  padding: 0;
   text-align: center;
   background-color: #fff; }
   header .container {
@@ -188,6 +188,7 @@ header {
     vertical-align: bottom; }
 
 .header__top-line {
+  padding-top: 30px;
   font-weight: 500;
   color: #4e4e4e;
   font-variant: small-caps;
@@ -718,11 +719,16 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
 /* Extra small devices */
 @media (max-width: 767px) {
   header {
-    padding: 10px 20px 0; }
+    padding: 0 20px; }
+
+  .header__top-line {
+    padding-top: 10px; }
 
   .header__slogan {
     width: 100%;
-    margin-bottom: 20px; }
+    padding-left: 70px;
+    margin-bottom: 20px;
+    font-size: 26px; }
 
   .header__logo {
     float: left;

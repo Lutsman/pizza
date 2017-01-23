@@ -99,11 +99,16 @@
 /* Extra small devices */
 @media (max-width: 767px) {
   header {
-    padding: 10px 20px 0;
+    padding: 0 20px;
+  }
+  .header__top-line {
+    padding-top: 10px;
   }
   .header__slogan {
     width: 100%;
+    padding-left: 70px;
     margin-bottom: 20px;
+    font-size: 26px;
   }
   .header__logo {
     float: left;
