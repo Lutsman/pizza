@@ -416,20 +416,20 @@ header {
   font: 36px "Roboto", sans-serif;
   font-weight: 500;
   color: #171717;
-  text-align: center;
-  background-color: #ff0; }
+  text-align: center; }
 .goods-box__form .stepper-input {
   width: 100%;
-  padding: 0 65px;
+  padding: 0 50px 0 65px;
   line-height: 42px;
   text-align: center;
-  background-color: transparent; }
+  background-color: #ff0; }
 .goods-box__form .stepper-arrow {
   position: absolute;
   z-index: 2;
   top: 0;
   width: 65px;
   line-height: 42px;
+  background-color: #ff0;
   cursor: pointer; }
 .goods-box__form .up {
   left: 0;
@@ -537,6 +537,9 @@ header {
     padding: 0 0 0 160px; } }
 /* Medium devices */
 @media (max-width: 1199px) {
+  .page-wrap {
+    padding-top: 320px; }
+
   .header__top-line {
     letter-spacing: normal; }
 
@@ -556,7 +559,18 @@ header {
     font-size: 26px; }
 
   .header__bottom-line > div {
-    font-size: 14px; } }
+    font-size: 14px; }
+
+  .shadow-line {
+    top: 30px; }
+
+  .goods-box__image-box {
+    float: none; }
+
+  .goods-box__text-box {
+    padding: 0 30px; }
+    .goods-box__text-box h2 {
+      text-align: center; } }
 /* Small devices */
 /* Extra small devices */
 

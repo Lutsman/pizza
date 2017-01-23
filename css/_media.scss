@@ -41,6 +41,9 @@
 
 /* Medium devices */
 @media (max-width: 1199px) {
+  .page-wrap {
+    padding-top: 320px;
+  }
   .header__top-line {
     letter-spacing: normal;
   }
@@ -61,6 +64,19 @@
   }
   .header__bottom-line > div {
     font-size: 14px;
+  }
+  .shadow-line {
+    top: 30px;
+  }
+  .goods-box__image-box {
+    float: none;
+  }
+  .goods-box__text-box {
+    padding: 0 30px;
+
+    h2 {
+      text-align: center;
+    }
   }
 }
 
