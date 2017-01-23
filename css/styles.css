@@ -1,0 +1,510 @@
+/*search-advance slide*/
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500,700&subset=cyrillic");
+@keyframes search-advance-show {
+  from {
+    max-height: 0;
+    padding: 0; }
+  to {
+    max-height: 300px;
+    padding: 19px 0; } }
+@keyframes search-advance-hide {
+  from {
+    max-height: 300px;
+    padding: 19px 0; }
+  to {
+    max-height: 0;
+    padding: 0; } }
+/*fade*/
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fade-out {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+/*Import fonts from Google fonts */
+@font-face {
+  font-family: 'Acrom';
+  font-style: normal;
+  font-weight: 100;
+  src: url("../fonts/The Northern Block - Acrom Thin.otf") format("opentype"); }
+@font-face {
+  font-family: 'Acrom';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/The Northern Block - Acrom Light.otf") format("opentype"); }
+@font-face {
+  font-family: 'Acrom';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/The Northern Block - Acrom.otf") format("opentype"); }
+@font-face {
+  font-family: 'Acrom';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/The Northern Block - Acrom Medium.otf") format("opentype"); }
+@font-face {
+  font-family: 'Acrom';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/The Northern Block - Acrom Bold.otf") format("opentype"); }
+@font-face {
+  font-family: 'Acrom';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/The Northern Block - Acrom ExtraBold.otf") format("opentype"); }
+@font-face {
+  font-family: 'MyriadPro';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/MyriadProRegular.otf) format("opentype");
+  src: url(../fonts/MyriadProRegular.woff) format("woff"); }
+/* ----------------------------------------------
+ Reset
+ ---------------------------------------------- */
+* {
+  padding: 0;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* ----------------------------------------------
+ Main
+ ---------------------------------------------- */
+html, body {
+  width: 100%; }
+
+body {
+  min-width: 320px;
+  font: 18px "Acrom";
+  font-weight: 400;
+  color: #272727;
+  background-color: #fff; }
+
+header::after, footer::after, div::after, nav::after, ul::after, form::after {
+  content: '';
+  display: table;
+  clear: both; }
+
+.page-wrap {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1920px;
+  padding-top: 370px; }
+
+.center-block {
+  position: relative;
+  z-index: 2;
+  padding-right: 300px; }
+
+/*section, .container {
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    width: 1220px;
+    margin: 0 auto;
+}*/
+/* ----------------------------------------------
+ Fonts Paragrahps
+ ---------------------------------------------- */
+h1 {
+  margin: 0 0 50px;
+  font: 60px "Acrom";
+  font-weight: 500;
+  color: #6f6f6f;
+  text-align: center; }
+
+h2 {
+  margin-bottom: 10px;
+  font: 36px "Acrom";
+  font-weight: 400;
+  color: #000; }
+
+/* ----------------------------------------------
+ Links Img
+ ---------------------------------------------- */
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: 0; }
+
+li {
+  list-style: none; }
+
+img {
+  width: 100%;
+  vertical-align: bottom; }
+
+/* ----------------------------------------------
+ Form Buttons Inputs
+ ---------------------------------------------- */
+button, input, textarea {
+  outline: none;
+  border: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+button {
+  cursor: pointer; }
+
+/* ---------------------------------------------- /*
+ Transition elsements
+/* ---------------------------------------------- */
+a, button {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+/* ----------------------------------------------
+ Header
+ ---------------------------------------------- */
+header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 0 0;
+  text-align: center;
+  background-color: #fff; }
+  header .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1920px;
+    padding-right: 300px; }
+
+.shadow-line {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  top: 36px;
+  vertical-align: bottom;
+  width: 100%;
+  max-width: 1185px;
+  height: 36px;
+  background-image: url("../images/shadow-line.png"); }
+
+.header__top-line, .header__bottom-line {
+  font-size: 0; }
+  .header__top-line > div, .header__bottom-line > div {
+    display: inline-block;
+    vertical-align: bottom; }
+
+.header__top-line {
+  font-weight: 500;
+  color: #4e4e4e;
+  font-variant: small-caps;
+  letter-spacing: -3px; }
+
+.header__bottom-line {
+  padding-top: 40px;
+  text-align: center; }
+  .header__bottom-line > div {
+    position: relative;
+    z-index: 2;
+    width: 24%;
+    min-height: 61px;
+    padding-left: 80px;
+    font: 18px "Roboto Slab", serif;
+    font-weight: 700;
+    font-variant: small-caps;
+    color: #646464;
+    text-align: left; }
+    .header__bottom-line > div::before, .header__bottom-line > div::after {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 2; }
+    .header__bottom-line > div::before {
+      top: 43px;
+      left: -13px;
+      line-height: 18px; }
+    .header__bottom-line > div::after {
+      top: 0;
+      left: 0;
+      background-image: url("../images/sprite.png"); }
+  .header__bottom-line .icon-phone::after {
+    width: 57px;
+    height: 55px;
+    background-position: 0 0; }
+  .header__bottom-line .icon-phone::before {
+    content: '1'; }
+  .header__bottom-line .icon-car::after {
+    width: 64px;
+    height: 61px;
+    background-position: -128px 0; }
+  .header__bottom-line .icon-car::before {
+    content: '2'; }
+  .header__bottom-line .icon-purse::after {
+    width: 46px;
+    height: 49px;
+    background-position: -256px 0; }
+  .header__bottom-line .icon-purse::before {
+    content: '3'; }
+
+.header__slogan {
+  width: 38%;
+  padding: 0 30px;
+  font-size: 40px; }
+
+.header__logo {
+  width: 24%; }
+  .header__logo a {
+    display: block; }
+
+.header__contacts {
+  width: 38%;
+  padding: 0 30px;
+  font-size: 30px;
+  text-align: left; }
+
+.header__phone {
+  font: 36px "MyriadPro";
+  font-weight: 400;
+  font-variant: small-caps;
+  color: #000;
+  letter-spacing: normal; }
+
+/* ----------------------------------------------
+ Nav
+ ---------------------------------------------- */
+.goods-menu {
+  position: absolute;
+  z-index: 1100;
+  top: 26px;
+  right: 20px;
+  width: 250px;
+  font-size: 24px;
+  color: #4e4e4e;
+  font-variant: small-caps;
+  text-align: left; }
+  .goods-menu ul {
+    padding: 100px 0;
+    margin-right: 40px;
+    border-right: 4px solid rgba(0, 0, 0, 0.2); }
+  .goods-menu li {
+    margin-bottom: 40px; }
+  .goods-menu a {
+    display: block;
+    position: relative;
+    z-index: 2;
+    height: 86px;
+    padding-right: 50px;
+    line-height: 86px; }
+    .goods-menu a::before, .goods-menu a::after {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 2;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+    .goods-menu a::before {
+      top: 0;
+      right: -45px;
+      width: 86px;
+      height: 86px;
+      background-color: #f8f8f9;
+      border: 3px solid #c6c6c7;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%; }
+    .goods-menu a:hover {
+      color: #00b120; }
+
+.icon-pizza::after {
+  top: 10px;
+  right: -38px;
+  width: 81px;
+  height: 68px;
+  background-image: url("../images/menu_icon_pizza_gray.png"); }
+.icon-pizza:hover::after {
+  background-image: url("../images/menu_icon_pizza.png"); }
+
+.icon-steak::after {
+  top: 15px;
+  right: -39px;
+  width: 82px;
+  height: 60px;
+  background-image: url("../images/menu_icon_steak_gray.png"); }
+.icon-steak:hover::after {
+  background-image: url("../images/menu_icon_steak.png"); }
+
+.icon-burger::after {
+  top: 13px;
+  right: -34px;
+  width: 68px;
+  height: 64px;
+  background-image: url("../images/menu_icon_burger_gray.png"); }
+.icon-burger:hover::after {
+  background-image: url("../images/menu_icon_burger.png"); }
+
+.icon-draniki::after {
+  top: 18px;
+  right: -41px;
+  width: 86px;
+  height: 57px;
+  background-image: url("../images/menu_icon_pancakes_gray.png"); }
+.icon-draniki:hover::after {
+  background-image: url("../images/menu_icon_pancakes.png"); }
+
+/* ----------------------------------------------
+ Content
+ ---------------------------------------------- */
+.content__goods-box {
+  float: left;
+  width: 50%;
+  padding: 0 30px;
+  margin-bottom: 50px; }
+
+.goods-box__image-box {
+  float: left;
+  position: relative;
+  z-index: 2;
+  width: 207px;
+  height: 193px; }
+  .goods-box__image-box .price {
+    position: absolute;
+    z-index: 2;
+    left: 25px;
+    bottom: 13px;
+    width: 160px;
+    height: 50px;
+    font: 25px "Roboto", sans-serif;
+    font-weight: 700;
+    color: #090909;
+    /* font-variant: small-caps;*/
+    text-align: center;
+    line-height: 50px;
+    background-color: #ff0;
+    -ms-transform: skew(-15deg);
+    -moz-transform: skew(-15deg);
+    -webkit-transform: skew(-15deg);
+    -o-transform: skew(-15deg);
+    transform: skew(-15deg); }
+    .goods-box__image-box .price p {
+      -ms-transform: skew(15deg);
+      -moz-transform: skew(15deg);
+      -webkit-transform: skew(15deg);
+      -o-transform: skew(15deg);
+      transform: skew(15deg); }
+
+.goods-box__text-box {
+  padding-left: 230px; }
+  .goods-box__text-box p {
+    margin-bottom: 20px; }
+
+.goods-box__form .stepper {
+  position: relative;
+  z-index: 2;
+  width: 186px;
+  height: 42px;
+  font: 36px "Roboto", sans-serif;
+  font-weight: 500;
+  color: #171717;
+  text-align: center;
+  background-color: #ff0; }
+.goods-box__form .stepper-input {
+  width: 100%;
+  padding: 0 65px;
+  line-height: 42px;
+  text-align: center;
+  background-color: transparent; }
+.goods-box__form .stepper-arrow {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  width: 65px;
+  line-height: 42px;
+  cursor: pointer; }
+.goods-box__form .up {
+  left: 0;
+  border-right: 1px solid #212121; }
+.goods-box__form .down {
+  right: 0;
+  border-left: 1px solid #212121; }
+
+.btn-choose {
+  display: block;
+  width: 242px;
+  height: 105px;
+  /*width: 197px;
+  height: 59px;*/
+  margin: 0 auto;
+  font-size: 23px;
+  font-weight: 400;
+  color: #20ba3c;
+  text-align: center;
+  background-color: #fff;
+  background-image: url("../images/btn-choose.png"); }
+
+.btn-scroll-down {
+  display: block;
+  position: relative;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 50px;
+  border: 4px solid #cecece;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%; }
+  .btn-scroll-down::before, .btn-scroll-down::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 2;
+    left: 14px;
+    width: 20px;
+    height: 20px;
+    border-top: 4px solid #cecece;
+    border-right: 4px solid #cecece;
+    -ms-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+  .btn-scroll-down::before {
+    top: 2px; }
+  .btn-scroll-down::after {
+    top: 17px; }
+
+/* ----------------------------------------------
+ Footer
+ ---------------------------------------------- */
+/* ----------------------------------------------
+ Sections
+ ---------------------------------------------- */
+/* ----------------------------------------------
+ Colors Backgrounds
+ ---------------------------------------------- */
+/* Medium devices */
+@media (max-width: 1199px) {
+  .container {
+    width: 970px; } }
+/* Small devices */
+@media (max-width: 991px) {
+  .container {
+    width: 750px; } }
+/* Extra small devices */
+@media (max-width: 767px) {
+  .container {
+    width: 100%; } }
+
+/*# sourceMappingURL=styles.css.map */

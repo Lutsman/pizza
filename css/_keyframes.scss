@@ -1,0 +1,43 @@
+/*search-advance slide*/
+@keyframes search-advance-show {
+    from {
+        max-height: 0;
+        padding: 0;
+    }
+    to {
+        max-height: 300px;
+        padding: 19px 0;
+    }
+}
+
+@keyframes search-advance-hide {
+    from {
+        max-height: 300px;
+        padding: 19px 0;
+    }
+    to {
+        max-height: 0;
+        padding: 0;
+    }
+}
+
+
+/*fade*/
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

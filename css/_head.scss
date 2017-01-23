@@ -1,0 +1,493 @@
+/* ----------------------------------------------
+ Reset
+ ---------------------------------------------- */
+* {
+    padding: 0;
+    margin: 0 auto;
+    background-position:center;
+    background-repeat:no-repeat;
+    @include box-sizing(border-box);
+}
+
+/* ----------------------------------------------
+ Main
+ ---------------------------------------------- */
+
+html, body {
+    width: 100%;
+}
+
+body {
+    min-width: 320px;
+    font: 18px $acrom;
+    font-weight: 400;
+    color: #272727;
+    background-color: #fff;
+}
+header, footer, div, nav, ul, form {
+     &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+.page-wrap {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1920px;
+    padding-top: 370px;
+}
+.center-block {
+    position: relative;
+    z-index: 2;
+    padding-right: 300px;
+}
+
+/*section, .container {
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    width: 1220px;
+    margin: 0 auto;
+}*/
+
+/* ----------------------------------------------
+ Fonts Paragrahps
+ ---------------------------------------------- */
+
+h1 {
+    margin: 0 0 50px;
+    font: 60px $acrom;
+    font-weight: 500;
+    color: #6f6f6f;
+    text-align: center;
+}
+h2 {
+    margin-bottom: 10px;
+    font: 36px $acrom;
+    font-weight: 400;
+    color: #000;
+}
+
+/* ----------------------------------------------
+ Links Img
+ ---------------------------------------------- */
+
+a {
+    color: inherit;
+    text-decoration: none;
+    outline: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+/* ----------------------------------------------
+ Form Buttons Inputs
+ ---------------------------------------------- */
+
+button, input, textarea {
+    outline: none;
+    border: none;
+    @include box-shadow(none);
+}
+button {
+    cursor: pointer;
+}
+
+/* ---------------------------------------------- /*
+ Transition elsements
+/* ---------------------------------------------- */
+
+a, button {
+    @include transition(all 0.2s ease-in-out);
+}
+
+/* ----------------------------------------------
+ Header
+ ---------------------------------------------- */
+
+header {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 0 0;
+    text-align: center;
+    background-color: #fff;
+
+    .container {
+        position: relative;
+        z-index: 2;
+        max-width: 1920px;
+        padding-right: 300px;
+    }
+}
+
+.shadow-line {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    top: 36px;
+    vertical-align: bottom;
+    width: 100%;
+    max-width: 1185px;
+    height: 36px;
+    background-image: url("../images/shadow-line.png");
+}
+
+.header__top-line, .header__bottom-line {
+    font-size: 0;
+
+    > div {
+        display: inline-block;
+        vertical-align: bottom;
+    }
+}
+.header__top-line {
+    font-weight: 500;
+    color: #4e4e4e;
+    font-variant: small-caps;
+    letter-spacing: -3px;
+}
+.header__bottom-line {
+    padding-top: 40px;
+    text-align: center;
+
+    > div {
+        position: relative;
+        z-index: 2;
+        width: 24%;
+        min-height: 61px;
+        padding-left: 80px;
+        font: 18px $robotoSlab;
+        font-weight: 700;
+        font-variant: small-caps;
+        color: #646464;
+        text-align: left;
+
+        &::before, &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 2;
+        }
+        &::before {
+            top: 43px;
+            left: -13px;
+            line-height: 18px;
+        }
+        &::after {
+            top: 0;
+            left: 0;
+            background-image: url("../images/sprite.png");
+        }
+    }
+    .icon-phone {
+        &::after {
+            width: 57px;
+            height: 55px;
+            background-position: 0 0;
+        }
+        &::before {
+            content: '1';
+        }
+    }
+    .icon-car {
+        &::after {
+            width: 64px;
+            height: 61px;
+            background-position: -128px 0;
+        }
+        &::before {
+            content: '2';
+        }
+    }
+    .icon-purse{
+        &::after {
+            width: 46px;
+            height: 49px;
+            background-position: -256px 0;
+        }
+        &::before {
+            content: '3';
+        }
+    }
+}
+
+.header__slogan {
+    width: 38%;
+    padding: 0 30px;
+    font-size: 40px;
+}
+.header__logo {
+    width: 24%;
+
+    a {
+        display: block;
+    }
+}
+.header__contacts {
+    width: 38%;
+    padding: 0 30px;
+    font-size: 30px;
+    text-align: left;
+}
+.header__phone {
+    font: 36px $myriadPro;
+    font-weight: 400;
+    font-variant: small-caps;
+    color: #000;
+    letter-spacing: normal;
+}
+
+/* ----------------------------------------------
+ Nav
+ ---------------------------------------------- */
+
+.goods-menu {
+    position: absolute;
+    z-index: 1100;
+    top: 26px;
+    right: 20px;
+    width: 250px;
+    font-size: 24px;
+    color: #4e4e4e;
+    font-variant: small-caps;
+    text-align: left;
+
+    ul {
+        padding: 100px 0;
+        margin-right: 40px;
+        border-right: 4px solid rgba(0, 0, 0, 0.2);
+    }
+
+    li {
+        margin-bottom: 40px;
+    }
+
+    a {
+        display: block;
+        position: relative;
+        z-index: 2;
+        height: 86px;
+        padding-right: 50px;
+        line-height: 86px;
+
+        &::before, &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 2;
+            @include transition(all 0.2s ease-in-out);
+        }
+        &::before {
+            top: 0;
+            right: -45px;
+            width: 86px;
+            height: 86px;
+            background-color: #f8f8f9;
+            border: 3px solid #c6c6c7;
+            @include border-radius(50%);
+        }
+
+        &:hover {
+            color: #00b120;
+        }
+    }
+}
+
+.icon-pizza {
+
+    &::after {
+        top: 10px;
+        right: -38px;
+        width: 81px;
+        height: 68px;
+        background-image: url("../images/menu_icon_pizza_gray.png");
+    }
+    &:hover::after {
+        background-image: url("../images/menu_icon_pizza.png");
+    }
+}
+.icon-steak {
+
+    &::after {
+        top: 15px;
+        right: -39px;
+        width: 82px;
+        height: 60px;
+        background-image: url("../images/menu_icon_steak_gray.png");
+    }
+    &:hover::after {
+        background-image: url("../images/menu_icon_steak.png");
+    }
+}
+.icon-burger {
+
+    &::after {
+        top: 13px;
+        right: -34px;
+        width: 68px;
+        height: 64px;
+        background-image: url("../images/menu_icon_burger_gray.png");
+    }
+    &:hover::after {
+        background-image: url("../images/menu_icon_burger.png");
+    }
+}
+.icon-draniki {
+
+    &::after {
+        top: 18px;
+        right: -41px;
+        width: 86px;
+        height: 57px;
+        background-image: url("../images/menu_icon_pancakes_gray.png");
+    }
+    &:hover::after {
+        background-image: url("../images/menu_icon_pancakes.png");
+    }
+}
+
+/* ----------------------------------------------
+ Content
+ ---------------------------------------------- */
+
+.content {}
+.content__goods-box {
+    float: left;
+    width: 50%;
+    padding: 0 30px;
+    margin-bottom: 50px;
+}
+.goods-box__image-box {
+    float: left;
+    position: relative;
+    z-index: 2;
+    width: 207px;
+    height: 193px;
+
+    .price {
+        position: absolute;
+        z-index: 2;
+        left: 25px;
+        bottom: 13px;
+        width: 160px;
+        height: 50px;
+        font: 25px $roboto;
+        font-weight: 700;
+        color: #090909;
+       /* font-variant: small-caps;*/
+        text-align: center;
+        line-height: 50px;
+        background-color: $yellow;
+        @include transform(skew(-15deg));
+
+        p {
+            @include transform(skew(15deg));
+        }
+    }
+}
+.goods-box__text-box {
+    padding-left: 230px;
+
+    p {
+        margin-bottom: 20px;
+    }
+}
+
+.goods-box__form {
+
+    .stepper {
+        position: relative;
+        z-index: 2;
+        width: 186px;
+        height: 42px;
+        font: 36px $roboto;
+        font-weight: 500;
+        color: #171717;
+        text-align: center;
+        background-color: $yellow;
+    }
+
+    .stepper-input {
+        width: 100%;
+        padding: 0 65px;
+        line-height: 42px;
+        text-align: center;
+        background-color: transparent;
+    }
+    .stepper-arrow {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        width: 65px;
+        line-height: 42px;
+        cursor: pointer;
+    }
+    .up {
+        left: 0;
+        border-right: 1px solid #212121;
+    }
+    .down {
+        right: 0;
+        border-left: 1px solid #212121;
+    }
+}
+
+.btn-choose {
+    display: block;
+    width: 242px;
+    height: 105px;
+    /*width: 197px;
+    height: 59px;*/
+    margin: 0 auto;
+    font-size: 23px;
+    font-weight: 400;
+    color: #20ba3c;
+    text-align: center;
+    background-color: #fff;
+    background-image: url("../images/btn-choose.png");
+}
+
+.btn-scroll-down {
+    display: block;
+    position: relative;
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 50px;
+    border: 4px solid #cecece;
+    @include border-radius(50%);
+
+    &::before, &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 2;
+        left: 14px;
+        width: 20px;
+        height: 20px;
+        border-top: 4px solid #cecece;
+        border-right: 4px solid #cecece;
+        @include transform(rotate(135deg));
+        @include transition(all 0.2s ease-in-out);
+    }
+    &::before {
+        top: 2px;
+    }
+    &::after {
+        top: 17px;
+    }
+}
