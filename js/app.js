@@ -304,6 +304,6 @@ $(document).ready(function () {
             pageSearchBlock: document.querySelector('.header')
         };
 
-        desktopMenu.fixedMenu();
+        desktopMenu.fixedMenu(options);
     })();
 });
