@@ -21,6 +21,7 @@
 
     <!--For improved cross-browser rendering-->
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="plugins/stepper/jquery.fs.stepper.css">
 
     <!-- Custom styles CSS -->
     <link rel="stylesheet" href="css/styles.css">
@@ -28,7 +29,7 @@
 <body>
     <div class="page-wrap">
         <header>
-            <div class="container">
+            <div class="container hidden">
                 <div class="header__top-line">
                     <div class="header__slogan">Доставка вкусной еды в Бресте!</div>
                     <div class="header__logo"><a href="/"><img src="images/logo.png" alt="Logo"></a></div>
@@ -80,11 +81,12 @@
                         </p>
 
                         <form class="goods-box__form" action="/" method="post">
-                            <div class="stepper">
+                            <input name="amount" required="" value="1" min="1" type="number" data-role="order-counter">
+                            <!--<div class="stepper">
                                 <input class="stepper-input" name="amount" required="" value="1" min="1" type="number">
                                 <span class="stepper-arrow up">+</span>
                                 <span class="stepper-arrow down">−</span>
-                            </div>
+                            </div>-->
                             <button class="btn-choose" type="submit">Выбрать</button>
                         </form>
                     </div>
@@ -104,11 +106,12 @@
                         </p>
 
                         <form class="goods-box__form" action="/" method="post">
-                            <div class="stepper">
+                            <input name="amount" required="" value="1" min="1" type="number" data-role="order-counter">
+                            <!--<div class="stepper">
                                 <input class="stepper-input" name="amount" required="" value="1" min="1" type="number">
                                 <span class="stepper-arrow up">+</span>
                                 <span class="stepper-arrow down">−</span>
-                            </div>
+                            </div>-->
                             <button class="btn-choose" type="submit">Выбрать</button>
                         </form>
                     </div>
@@ -128,11 +131,12 @@
                         </p>
 
                         <form class="goods-box__form" action="/" method="post">
-                            <div class="stepper">
+                            <input name="amount" required="" value="1" min="1" type="number" data-role="order-counter">
+                            <!--<div class="stepper">
                                 <input class="stepper-input" name="amount" required="" value="1" min="1" type="number">
                                 <span class="stepper-arrow up">+</span>
                                 <span class="stepper-arrow down">−</span>
-                            </div>
+                            </div>-->
                             <button class="btn-choose" type="submit">Выбрать</button>
                         </form>
                     </div>
@@ -152,11 +156,12 @@
                         </p>
 
                         <form class="goods-box__form" action="/" method="post">
-                            <div class="stepper">
+                            <input name="amount" required="" value="1" min="1" type="number" data-role="order-counter">
+                            <!--<div class="stepper">
                                 <input class="stepper-input" name="amount" required="" value="1" min="1" type="number">
                                 <span class="stepper-arrow up">+</span>
                                 <span class="stepper-arrow down">−</span>
-                            </div>
+                            </div>-->
                             <button class="btn-choose" type="submit">Выбрать</button>
                         </form>
                     </div>
@@ -172,7 +177,9 @@
     </div>
 
 
-
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="plugins/stepper/jquery.fs.stepper.js"></script>
+    <script src="js/app.js"></script>
 
 
 </body>
