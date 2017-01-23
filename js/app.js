@@ -60,6 +60,8 @@
             var elem = document.elementFromPoint(self._pageSearchBlock.offsetWidth/2,
                 coordsPageSearchBlock.bottom + self.getExtraLength());
 
+            //console.dir(elem);
+
             if (!elem && activeLink) {
                 activeLink.closest('li').classList.remove(self._pageSearchClass);
                 activeLink = null;
@@ -111,7 +113,7 @@
         var extraLength = 50;
 
         if (pageYOffset < 300) { //if it is beginning of start page make meter longer
-            extraLength = 300;
+            extraLength = 100;
         }
 
         return extraLength;
@@ -242,8 +244,8 @@ $(document).ready(function () {
         ScrollToAnchor.prototype.getTranslation = function (anchor) {
             var translation = 0;
 
-            if (anchorWithHash.hasAttribute('data-translation')) {
-                translation = anchorWithHash.getAttribute('data-translation');
+            if (anchor.hasAttribute('data-translation')) {
+                translation = anchor.getAttribute('data-translation');
             } else if (this._translationElementSelector) {
                 $(this._translationElementSelector).each(function () {
                     translation += this.offsetHeight;
