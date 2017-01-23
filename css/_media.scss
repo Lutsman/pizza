@@ -1,5 +1,67 @@
+/* Large devices */
+@media (max-width: 1529px) {
+  h2 {
+    font-size: 30px;
+  }
+  header .container, .center-block {
+    padding-right: 250px;
+  }
+  .goods-menu {
+    width: 200px;
+    font-size: 20px;
+  }
+  .header__slogan, .header__contacts {
+    width: 320px;
+    padding: 0 20px;
+  }
+  .header__bottom-line > div {
+    width: 30%;
+    min-width: 30%;
+    font-size: 16px;
+  }
+  .shadow-line {
+    background-size: contain;
+  }
+  .content__goods-box {
+    padding-right: 0;
+  }
+  .goods-box__image-box {
+    width: 150px;
+
+    .price {
+      left: 10px;
+      width: 130px;
+      font-size: 20px;
+    }
+  }
+  .goods-box__text-box {
+    padding: 0 0 0 160px;
+  }
+}
+
 /* Medium devices */
-@media (max-width:1199px) {
+@media (max-width: 1199px) {
+  .header__top-line {
+    letter-spacing: normal;
+  }
+  .header__logo {
+    width: 200px;
+  }
+  .header__slogan, .header__contacts {
+    width: 270px;
+  }
+  .header__slogan {
+    font-size: 30px;
+  }
+  .header__contacts {
+    font-size: 20px;
+  }
+  .header__phone {
+    font-size: 26px;
+  }
+  .header__bottom-line > div {
+    font-size: 14px;
+  }
 }
 
 /* Small devices */
