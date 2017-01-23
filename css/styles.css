@@ -5,26 +5,15 @@
     max-height: 0;
     padding: 0; }
   to {
-    max-height: 300px;
+    max-height: 100%;
     padding: 19px 0; } }
 @keyframes search-advance-hide {
   from {
-    max-height: 300px;
+    max-height: 100%;
     padding: 19px 0; }
   to {
     max-height: 0;
     padding: 0; } }
-/*fade*/
-@keyframes fade-in {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@keyframes fade-out {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0; } }
 /*Import fonts from Google fonts */
 @font-face {
   font-family: 'Acrom';
@@ -104,15 +93,9 @@ header::after, footer::after, div::after, nav::after, ul::after, form::after {
   z-index: 2;
   padding-right: 300px; }
 
-/*section, .container {
-    position: relative;
-    z-index: 2;
-}
+.hidden {
+  display: none; }
 
-.container {
-    width: 1220px;
-    margin: 0 auto;
-}*/
 /* ----------------------------------------------
  Fonts Paragrahps
  ---------------------------------------------- */
@@ -487,18 +470,6 @@ header {
   .btn-scroll-down::after {
     top: 17px; }
 
-.hidden {
-  display: none; }
-
-/* ----------------------------------------------
- Footer
- ---------------------------------------------- */
-/* ----------------------------------------------
- Sections
- ---------------------------------------------- */
-/* ----------------------------------------------
- Colors Backgrounds
- ---------------------------------------------- */
 /* Large devices */
 @media (max-width: 1529px) {
   h2 {
