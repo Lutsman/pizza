@@ -217,11 +217,13 @@ header {
     min-width: 380px;
     min-height: 61px;
     padding-left: 80px;
+    padding-right: 20px;
     font: 18px "Roboto Slab", serif;
     font-weight: 700;
     font-variant: small-caps;
     color: #646464;
-    text-align: left; }
+    text-align: left;
+    vertical-align: top; }
     .header__bottom-line > div::before, .header__bottom-line > div::after {
       content: '';
       display: block;
@@ -255,7 +257,7 @@ header {
     content: '3'; }
 
 .header__slogan {
-  width: 38%;
+  width: 465px;
   padding: 0 30px;
   font-size: 40px; }
 
@@ -265,7 +267,7 @@ header {
     display: block; }
 
 .header__contacts {
-  width: 38%;
+  width: 465px;
   padding: 0 30px;
   font-size: 30px;
   text-align: left; }
@@ -374,8 +376,7 @@ header {
   float: left;
   position: relative;
   z-index: 2;
-  width: 207px;
-  height: 193px; }
+  width: 207px; }
   .goods-box__image-box .price {
     position: absolute;
     z-index: 2;
@@ -403,7 +404,7 @@ header {
       transform: skew(15deg); }
 
 .goods-box__text-box {
-  padding-left: 230px; }
+  padding: 0 20px 0 230px; }
   .goods-box__text-box p {
     margin-bottom: 20px; }
 
@@ -495,7 +496,64 @@ header {
 /* ----------------------------------------------
  Colors Backgrounds
  ---------------------------------------------- */
+/* Large devices */
+@media (max-width: 1529px) {
+  h2 {
+    font-size: 30px; }
+
+  header .container, .center-block {
+    padding-right: 250px; }
+
+  .goods-menu {
+    width: 200px;
+    font-size: 20px; }
+
+  .header__slogan, .header__contacts {
+    width: 320px;
+    padding: 0 20px; }
+
+  .header__bottom-line > div {
+    width: 30%;
+    min-width: 30%;
+    font-size: 16px; }
+
+  .shadow-line {
+    background-size: contain; }
+
+  .content__goods-box {
+    padding-right: 0; }
+
+  .goods-box__image-box {
+    width: 150px; }
+    .goods-box__image-box .price {
+      left: 10px;
+      width: 130px;
+      font-size: 20px; }
+
+  .goods-box__text-box {
+    padding: 0 0 0 160px; } }
 /* Medium devices */
+@media (max-width: 1199px) {
+  .header__top-line {
+    letter-spacing: normal; }
+
+  .header__logo {
+    width: 200px; }
+
+  .header__slogan, .header__contacts {
+    width: 270px; }
+
+  .header__slogan {
+    font-size: 30px; }
+
+  .header__contacts {
+    font-size: 20px; }
+
+  .header__phone {
+    font-size: 26px; }
+
+  .header__bottom-line > div {
+    font-size: 14px; } }
 /* Small devices */
 /* Extra small devices */
 
